@@ -44,8 +44,8 @@ class Predict_Model_class(object):
         scores = F.softmax(scores,dim=1)
         _,predicted = torch.max(scores,dim=1)
 
-        print(scores)
-        return self.mapping[int(predicted.item())]
+        
+        return scores,self.mapping[int(predicted.item())]
 
 
     def evaluate_batch(self,batch,labels):

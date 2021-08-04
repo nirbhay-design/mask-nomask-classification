@@ -89,10 +89,12 @@ while True:
         l.append(x_test)
         img1 = transformation(x_test).unsqueeze(0)
         print(img1.shape)
-        value = model.evaluate_img(img1)
+        prob,value = model.evaluate_img(img1)
         color = (0,255,0) if value == 'masked' else (0,0,255)
 
         # cv2.rectangle(img, (x, y), (x+w, y+h), (0,225,0), 2)
+        textoput = '{:s}-{:.2f}'.format(value, prob.max()*100)
+        cv2.putText(img,textoput,(x-6,y-10),font,0.70,color,2)
         cv2.rectangle(img, (x-7, y-10), (x+w+7, y+h+12), color, 2)
         """prediction= model.predict(x_test)
         score = tf.nn.softmax(prediction)"""
