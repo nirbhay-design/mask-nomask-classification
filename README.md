@@ -3,9 +3,9 @@
 detecting around 5000 images under mask and no mask classification using pytorch
 dependencies : pytorch , torchvision ,matplotlib , opencv , numpy , PIL 
 
-!1)run main.py script to check run at your end
+1)run main.py script to check run at your end
 
-!2)run Manualcheck.py script to check for images present in your system
+2)run Manualcheck.py script to check for images present in your system
 
 ![image](https://user-images.githubusercontent.com/66327437/128240312-22d2122a-d3cd-442d-a6d7-06c6966019de.png)
 
